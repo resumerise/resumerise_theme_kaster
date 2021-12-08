@@ -1,8 +1,6 @@
-<section id="education" class="certifications">
+<section class="section education" id="education">
 	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<header>
-			<%= it.resume.settings.labels.categoryProperty.education.categoryTitle %>
-		</header>
+		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
 	<% } %>
 	<div class="article-container">
 		<% it.resume?.education.forEach(function(education) { %>
