@@ -135,6 +135,7 @@ img {
 }
 
 .article-container {
+	display: -ms-grid;
 	display: grid;
 	row-gap: var(--mb-2);
 }
@@ -164,9 +165,17 @@ img {
 .article__phone,
 .article__mail,
 .article__url {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-column-gap: var(--mb-1);
+	-moz-column-gap: var(--mb-1);
 	column-gap: var(--mb-1);
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -197,6 +206,9 @@ img {
 
 /*==================== HOME ====================*/
 .home__wrapper {
+	display: -ms-grid;
+	display: grid;
+	row-gap: var(--mb-0-5);
 	margin: var(--mb-1) 0;
 }
 
@@ -222,7 +234,6 @@ img {
 .home__subtitle {
 	font-size: var(--h3-font-size);
 	color: var(--sub-title-color);
-	font-weight: var(--font-500);
 }
 
 .home__title,
@@ -239,10 +250,13 @@ img {
 
 /*==================== PROFILE ICONS ====================*/
 .profile-container {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: repeat(5, 1fr);
 	grid-template-columns: repeat(5, 1fr);
+	-ms-grid-column-align: center;
 	justify-self: center;
-	row-gap: var(--mb-1-5);
+	row-gap: var(--mb-1);
 }
 
 .profile__icon {
@@ -303,12 +317,18 @@ img {
 
 	.basics,
 	.main-wrapper {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 1fr var(--mb-2-5) .7fr;
 		grid-template-columns: 1fr .7fr;
+		-webkit-column-gap: var(--mb-2-5);
+		-moz-column-gap: var(--mb-2-5);
 		column-gap: var(--mb-2-5);
 	}
 
 	.profile__img {
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
 		order: 1;
 		width: 280px;
 	}
@@ -327,6 +347,8 @@ img {
 	.article__phone,
 	.article__mail,
 	.article__url {
+		-webkit-box-pack: initial;
+		-ms-flex-pack: initial;
 		justify-content: initial;
 	}
 
@@ -337,7 +359,12 @@ img {
 
 	.left .article__date {
 		position: absolute;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		row-gap: var(--mb-1-5);
 		left: 0;
