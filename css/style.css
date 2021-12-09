@@ -16,7 +16,7 @@
 	--black-color: black;
 
 	/*========== FONT & TYPORGRAPHY ==========*/
-	/* --body-font: 'Poppins', sans-serif; */
+	--body-font: 'Poppins', sans-serif;
 	/* --body-font: 'Times New Roman', Times, serif; */
 	/* --body-font: 'Roboto', sans-serif; */
 	/* --body-font: 'Readex Pro', sans-serif; */
@@ -76,7 +76,7 @@ body {
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
 	color: var(--text-color);
-	letter-spacing: .5px;
+	letter-spacing: .7px;
 }
 
 h1, h2, h3, h4 {
@@ -175,10 +175,12 @@ img {
 .article__url a {
 	color: var(--text-color) !important;
 }
-.article__list{
+
+.article__list {
 	margin-top: var(--mb-0-75);
 }
-.list__label{
+
+.list__label {
 	color: var(--title-color);
 	font-weight: var(--font-600);
 	font-size: var(--h3-font-size);
@@ -341,28 +343,43 @@ img {
 		top: 10%;
 	}
 
+	.right .article__date {
+		position: absolute;
+		left: 0;
+		top: 10%;
+	}
+
 	.left :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
 		margin-left: 30%;
 	}
 
-	.left .article__date::before {
+	.right :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
+		margin-left: 25%;
+	}
+
+	.article__date::before {
 		content: '';
 		position: absolute;
 		width: 50px;
 		height: 6px;
 		background: var(--title-color);
+	}
+
+	.left .article__date::before {
 		top: 45%;
 	}
 
-	.left li {
+	.right .article__date::before {
+		top: 115%;
+	}
+
+	.languages :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll),
+	.references :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
 		margin-left: 0;
 	}
 
-	.languages {
-		margin-left: 0;
-	}
-
-	.languages :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
+	.left li,
+	.right li {
 		margin-left: 0;
 	}
 }

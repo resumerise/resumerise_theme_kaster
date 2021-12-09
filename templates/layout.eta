@@ -42,21 +42,26 @@
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
-
-					<!-- LANGUAGE -->
-					<%~ include("language", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
-					
-				</div>
-				<div class="right">
 					<!-- VOLUNTEER -->
 					<%~ include("volunteer", {
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
 					
+				</div>
+				<div class="right">
+					<!-- AWARDS -->
+					<%~ include("awards", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+
+					<!-- LANGUAGE -->
+					<%~ include("language", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+
 					<!-- CERTIFICATION -->
 					<%~ include("certification", {
 						resume: it.resume,
@@ -65,12 +70,6 @@
 
 					<!-- SKILLS -->
 					<%~ include("skills", {
-						resume: it.resume,
-						formatDate: it.formatDate
-					}) %>
-					
-					<!-- AWARDS -->
-					<%~ include("awards", {
 						resume: it.resume,
 						formatDate: it.formatDate
 					}) %>
