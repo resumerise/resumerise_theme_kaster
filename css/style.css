@@ -115,7 +115,8 @@ img {
 
 .container {
 	/* max-width: 968px; */
-	max-width: 1024px;
+	/* max-width: 1024px; */
+	max-width: 1200px;
 	width: calc(100% - 3rem);
 	margin-left: var(--mb-1-5);
 	margin-right: var(--mb-1-5);
@@ -304,7 +305,7 @@ img {
 	.main-wrapper {
 		display: grid;
 		grid-template-columns: 1fr .7fr;
-		column-gap: var(--mb-1);
+		column-gap: var(--mb-2-5);
 	}
 
 	.profile__img {
@@ -373,10 +374,10 @@ img {
 		top: 115%;
 	}
 
-	.languages :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll),
+	/* .languages :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll),
 	.references :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
 		margin-left: 0;
-	}
+	} */
 
 	.left li,
 	.right li {
