@@ -1,5 +1,9 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -12,7 +16,12 @@
 	--black-color: black;
 
 	/*========== FONT & TYPORGRAPHY ==========*/
-	--body-font: 'Poppins', sans-serif;
+	/* --body-font: 'Poppins', sans-serif; */
+	/* --body-font: 'Times New Roman', Times, serif; */
+	/* --body-font: 'Roboto', sans-serif; */
+	/* --body-font: 'Readex Pro', sans-serif; */
+	/* --body-font: 'Montserrat', sans-serif; */
+	/* --body-font: 'Raleway', sans-serif; */
 
 	--bigger-font-size: 2.5rem;
 	--big-font-size: 2rem;
@@ -118,7 +127,7 @@ img {
 }
 
 .section__title {
-	font-size: var(--h1-font-size);
+	font-size: var(--h2-font-size);
 	font-weight: var(--font-700);
 	margin-bottom: var(--mb-2);
 	text-transform: uppercase;
@@ -166,9 +175,16 @@ img {
 .article__url a {
 	color: var(--text-color) !important;
 }
+.article__list{
+	margin-top: var(--mb-0-75);
+}
+.list__label{
+	color: var(--title-color);
+	font-weight: var(--font-600);
+	font-size: var(--h3-font-size);
+}
 
-.hide,
-.list__label {
+.hide {
 	display: none;
 	user-select: none;
 	-ms-user-select: none;
@@ -185,11 +201,11 @@ img {
 	display: block;
 	margin: auto;
 	margin-bottom: var(--mb-1-5);
-	border-radius: .2rem;
-	-webkit-border-radius: .2rem;
-	-moz-border-radius: .2rem;
-	-ms-border-radius: .2rem;
-	-o-border-radius: .2rem;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 }
 
 .home__title {
@@ -223,12 +239,10 @@ img {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	justify-self: center;
+	row-gap: var(--mb-1-5);
 }
 
 .profile__icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	font-size: 2rem;
 }
 
@@ -328,7 +342,7 @@ img {
 	}
 
 	.left :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
-		margin-left: 25%;
+		margin-left: 30%;
 	}
 
 	.left .article__date::before {
