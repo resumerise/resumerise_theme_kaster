@@ -374,7 +374,7 @@ img {
 	.right .article__date {
 		position: absolute;
 		left: 0;
-		top: 10%;
+		top: 0;
 	}
 
 	.main-wrapper :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
@@ -402,6 +402,7 @@ img {
 	.right li {
 		margin-left: 0;
 	}
+
 	.profile-container {
 		place-items: initial;
 	}
