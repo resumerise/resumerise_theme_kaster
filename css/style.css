@@ -69,8 +69,10 @@
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
-    color-adjust: exact !important;                 /*Firefox*/
+	-webkit-print-color-adjust: exact !important;
+	/* Chrome, Safari, Edge */
+	color-adjust: exact !important;
+	/*Firefox*/
 }
 
 body {
@@ -207,6 +209,10 @@ img {
 }
 
 /*==================== HOME ====================*/
+.basics {
+	padding-bottom: 5rem !important;
+}
+
 .home__wrapper {
 	display: -ms-grid;
 	display: grid;
@@ -313,10 +319,11 @@ img {
 }
 
 @media print, screen and (max-width: 320px) {
-	.profile-container{
+	.profile-container {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+
 @media print, screen and (min-width: 868px) {
 	.main {
 		margin: auto;
