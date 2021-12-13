@@ -69,6 +69,8 @@
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+    color-adjust: exact !important;                 /*Firefox*/
 }
 
 body {
@@ -374,7 +376,7 @@ img {
 	.right .article__date {
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: .4rem;
 	}
 
 	.main-wrapper :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
@@ -472,7 +474,7 @@ img {
 	.right .article__date {
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: .2rem !important;
 	}
 
 	.main-wrapper :is(.article__title, .article__subtitle, .article__description, .article__list, .article__text, .article__urll) {
