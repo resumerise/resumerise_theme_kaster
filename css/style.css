@@ -407,6 +407,7 @@ img {
 
 	.profile-container {
 		place-items: initial;
+		grid-template-columns: repeat(9, 1fr);
 	}
 }
 
@@ -505,5 +506,6 @@ img {
 
 	.profile-container {
 		place-items: initial;
+		grid-template-columns: repeat(9, 1fr);
 	}
 }
