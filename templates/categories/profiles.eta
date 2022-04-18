@@ -3,7 +3,7 @@
         <header class="section--hide-toc"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
     <% } %>
 
-    <div class="article-container profile-container grid">
+    <div class="article-container profile-container grid no-m">
         <% it.resume.basics.profiles?.forEach(function(profile){ %>
             <article class="profile__icon">
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.profile, showDelete: true, id: profile.id}) %>

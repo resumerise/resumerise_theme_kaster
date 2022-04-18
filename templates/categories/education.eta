@@ -7,7 +7,7 @@
 		<% it.resume?.education.forEach(function(education) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
-				<div class="article-header">
+				<div class="article-header without-logo">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
 						value: education.institution,

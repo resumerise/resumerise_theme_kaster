@@ -77,6 +77,12 @@
 					<%~ include("profile", {
 						resume: it.resume
 					}) %>
+					
+					<!-- REFERENCE -->
+					<%~ include("reference", {
+						resume: it.resume
+					}) %>
+					
 				</div>
 
 				<div class="right">
@@ -85,13 +91,13 @@
 						resume: it.resume
 					}) %>
 					
-					<!-- REFERENCE -->
-					<%~ include("reference", {
-						resume: it.resume
-					}) %>
-					
 					<!-- CERTIFICATION -->
 					<%~ include("certification", {
+						resume: it.resume
+					}) %>
+
+					<!-- AWARDS -->
+					<%~ include("awards", {
 						resume: it.resume
 					}) %>
 
@@ -107,11 +113,6 @@
 
 					<!-- LANGUAGE -->
 					<%~ include("language", {
-						resume: it.resume
-					}) %>
-
-					<!-- AWARDS -->
-					<%~ include("awards", {
 						resume: it.resume
 					}) %>
 				</div>

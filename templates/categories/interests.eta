@@ -3,7 +3,7 @@
 		<header><%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %></header>
 	<% } %>
 
-	<div class="article-container grid">
+	<div class="article-container grid no-m">
 		<% it.resume?.interests.forEach(function(interest) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.interest, showDelete: true, id: interest.id}) %>
