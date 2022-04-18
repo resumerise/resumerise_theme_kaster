@@ -11,7 +11,7 @@
 					classes: 'article__title'
 				}) %>
 
-				<div class="article-content grid s-c no-m">
+				<div class="article-content grid s-c">
 					<% data.forEach(function(skill) { %>
 						<div class="skills__progress grid">
 							<%~ include('key-value-item', {
