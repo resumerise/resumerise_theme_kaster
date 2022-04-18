@@ -3,11 +3,11 @@
 		<header><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
 	<% } %>
 
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.projects.forEach(function(project) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
-				<div class="article-header">
+				<div class="article-header with-logo">
 					<div>
 						<%~ include('key-value-item', {
 							label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
@@ -91,7 +91,7 @@
 				</div>
 			</article>
 		<% }) %>
-		
+
 		<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.project}) %>
 	</div>
 </section>

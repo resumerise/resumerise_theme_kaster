@@ -3,11 +3,11 @@
         <header><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></header>
     <% } %>
 
-    <div class="article-container">
+    <div class="article-container grid">
         <% it.resume?.work.forEach(function(work) { %>
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
-                <div class="article-header">
+                <div class="article-header with-logo">
                     <div>
                         <%~ include('key-value-item', {
                             label: it.resume.settings?.labels?.categoryProperty?.work?.company, 

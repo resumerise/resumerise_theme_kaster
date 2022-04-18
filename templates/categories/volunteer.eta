@@ -3,7 +3,7 @@
 		<header><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
 
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.volunteer.forEach(function(volunteer) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>

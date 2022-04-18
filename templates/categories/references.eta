@@ -3,7 +3,7 @@
 		<header><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
 	<% } %>
 
-	<div class="article-container">
+	<div class="article-container grid">
 		<% it.resume?.references.forEach(function(reference) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference, id: reference.id, showDelete: true}) %>
