@@ -1,35 +1,54 @@
 <section class="section work" id="work">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></header>
+        <header><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></header>
     <% } %>
+
     <div class="article-container">
         <% it.resume?.work.forEach(function(work) { %>
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
                 <div class="article-header">
-                    <%~ include('key-value-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.company, 
-                        value: work.company,
-                        classes: 'article__title'
-                    }) %>
-                    <%~ include('key-value-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-                        value: work.position,
-                        classes: 'article__subtitle'
-                    }) %>
-                    <%~ include('date-range', {
-                        startDate: work.startDate,
-                        endDate: work.endDate,
-                        present: work.present,
-                        settings: it.resume.settings,
-                        classes: 'article__date'
-                    }) %>
-                    <%~ include('key-url-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-                        value: work.website,
-                        classes: 'article__urll'
-                    }) %>
+                    <div>
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.company, 
+                            value: work.company,
+                            classes: 'article__title'
+                        }) %>
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                            value: work.position,
+                            classes: 'article__subtitle'
+                        }) %>
+                        
+                        <div class="article__date">
+                            <%~ include('date-range', {
+                                startDate: work.startDate,
+                                endDate: work.endDate,
+                                present: work.present,
+                            }) %>
+                            <%~ include('key-value-item', {
+                                label: it.resume.settings?.labels?.durationLabel, 
+                                value: work.durationLabel,
+                                classes: 'article__text duration'
+                            }) %>
+                        </div>
+
+                        <%~ include('key-url-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                            value: work.website,
+                            classes: 'article__urll'
+                        }) %>
+                    </div>
+
+                    <div>
+                        <% if (work.logo) { %>
+                            <div class="article__img">
+                                <img src="<%~ work.logo %>">
+                            </div>
+                        <% } %>
+                    </div>
                 </div>
+
                 <div class="article-content">
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
@@ -45,6 +64,7 @@
                 </div>
             </article>
         <% }) %>
+        
         <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
     </div>
 </section>

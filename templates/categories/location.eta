@@ -1,7 +1,8 @@
-<section class="certifications" id="location">
+<section id='location' class="location">
     <% if (it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle) { %>
-        <header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></header>
+        <header><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></header>
     <% } %>
+    
     <article>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.location}) %>
         <%~ include('key-value-item', {

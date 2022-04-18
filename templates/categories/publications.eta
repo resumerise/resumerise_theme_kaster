@@ -1,7 +1,8 @@
 <section class="section publications" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
+		<header><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
 	<% } %>
+
     <div class="article-container">
         <% it.resume?.publications.forEach(function(publication) { %>
             <article>
@@ -28,6 +29,7 @@
                         classes: 'article__urll'
                     }) %>
                 </div>
+
                 <div class="article-content">
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.publication?.summary, 
@@ -37,6 +39,7 @@
                 </div>
             </article>
         <% }) %>
+        
 	    <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.publication}) %>
     </div>
 </section>

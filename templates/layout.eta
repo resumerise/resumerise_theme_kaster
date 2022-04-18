@@ -19,7 +19,7 @@
 
 	</head>
 	<body>
-		<main class="main">
+		<main class="main container">
 			<% if (it.type === 'PRINT') { %>
 				<!-- cover Page -->
 				<%~ include("cover", {

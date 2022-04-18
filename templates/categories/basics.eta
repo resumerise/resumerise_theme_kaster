@@ -2,9 +2,11 @@
     <%~ include('profile-picture', {
         picture: it.resume.basics.picture
     }) %>
+
     <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-        <header class="hide"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
+        <header class="section--hide-toc hide"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></header>
     <% } %>
+    
     <div class="home-container">
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.basics}) %>
         <%~ include('key-value-item', {
