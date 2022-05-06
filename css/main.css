@@ -816,6 +816,7 @@ header,
 	.cover-page h1 {
 		font-size: var(--bigger-font-size);
 		font-family: var(--body-font);
+		margin-top: -2rem;
 	}
 
 	.cover-page h3 {
@@ -845,7 +846,7 @@ header,
 	.cover-page__header .profile__img {
 		position: absolute;
 		top: -4rem;
-		left: 23%;
+		left: 25%;
 		width: 8cm;
 		height: auto;
 		border-radius: 2rem;
